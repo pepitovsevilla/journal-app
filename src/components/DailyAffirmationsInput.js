@@ -1,13 +1,10 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 export default function DailyAffirmationsInput() {
-  const [dailyAffirmations, setDailyAffirmations] = useState('');
 
-  const handleDailyAffirmationsInputChange = (e) => {
-    const updatedAffirmations = e.target.value;;
-    setDailyAffirmations(updatedAffirmations);
-  };
-
+  const { dailyAffirmations, handleDailyAffirmationsInputChange } = useContext(AppContext);
+  
   return (
     <div className='container'>
       <form>

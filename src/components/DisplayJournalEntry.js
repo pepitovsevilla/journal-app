@@ -1,6 +1,7 @@
 import React from 'react';
 import GratitudeItemsDisplay from './GratitudeItemsDisplay';
 import TopPrioritiesDisplay from './TopPrioritiesDisplay'
+import DailyAffirmationsDisplay from './DailyAffirmationsDisplay'
 
 export default function EditJournalEntry() {
 
@@ -8,6 +9,7 @@ export default function EditJournalEntry() {
         <>
             <GratitudeItemsDisplay />
             <TopPrioritiesDisplay />
+            <DailyAffirmationsDisplay />
         </>
     )
 }

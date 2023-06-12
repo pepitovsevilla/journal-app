@@ -20,6 +20,14 @@ export const AppContextProvider = ({ children }) => {
       setTopPriorities(updatedItems);
     };
 
+    const [dailyAffirmations, setDailyAffirmations] = useState('');
+
+      const handleDailyAffirmationsInputChange = (e) => {
+        const updatedAffirmations = e.target.value;;
+        setDailyAffirmations(updatedAffirmations);
+      };
+
+
     const [editMode, setEditMode] = useState(true);
     
     function toggleEditMode() {
@@ -33,6 +41,9 @@ export const AppContextProvider = ({ children }) => {
       topPriorities, 
       setTopPriorities, 
       handleTopPrioritiesInputChange,
+      dailyAffirmations, 
+      setDailyAffirmations,
+      handleDailyAffirmationsInputChange,
       editMode, 
       setEditMode, 
       toggleEditMode 
