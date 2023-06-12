@@ -12,31 +12,36 @@ export default function GratitudeItemsInput() {
   return (
     <div className='container'>
       <form>
-        <div className='form-group'>
           <label>3 THINGS IM GRATEFUL FOR...</label>
-          <div>
+          <div className='form-group'>
             <input
+              type='text'
+              className='form-control'
               value={gratitudeItems[0]}
               onChange={(e) => handleGratitudeItemsInputChange(e, 0)}
               placeholder="Gratitude 1"
             />
           </div>
-          <div>
+          <div className='form-group'>
             <input
+              type='text'
+              className='form-control'
               value={gratitudeItems[1]}
               onChange={(e) => handleGratitudeItemsInputChange(e, 1)}
               placeholder="Gratitude 2"
             />
           </div>
-          <div>
+          <div className='form-group'>
             <input
+              type='text'
+              className='form-control'
               value={gratitudeItems[2]}
               onChange={(e) => handleGratitudeItemsInputChange(e, 2)}
               placeholder="Gratitude 3"
             />
           </div>
-        </div>
       </form>
     </div>
+    
   );
 }
