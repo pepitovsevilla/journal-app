@@ -1,12 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 export default function DailyReviewInput() {
-  const [dailyReview, setDailyReview] = useState('');
 
-  const handleDailyReviewInputChange = (e) => {
-    const updatedReview = e.target.value;;
-    setDailyReview(updatedReview);
-  };
+  const { dailyReview, handleDailyReviewInputChange } = useContext(AppContext);
 
   return (
     <div className='container'>

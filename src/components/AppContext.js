@@ -27,6 +27,20 @@ export const AppContextProvider = ({ children }) => {
         setDailyAffirmations(updatedAffirmations);
       };
 
+    const [highlightsOfTheDay, setHighlightsOfTheDay] = useState(['', '', '']);
+
+    const handleHighlightsOfTheDayInputChange = (e, index) => {
+      const updatedItems = [...highlightsOfTheDay];
+      updatedItems[index] = e.target.value;
+      setHighlightsOfTheDay(updatedItems);
+    };
+
+    const [dailyReview, setDailyReview] = useState('');
+
+    const handleDailyReviewInputChange = (e) => {
+      const updatedReview = e.target.value;;
+      setDailyReview(updatedReview);
+    };
 
     const [editMode, setEditMode] = useState(true);
     
@@ -44,6 +58,12 @@ export const AppContextProvider = ({ children }) => {
       dailyAffirmations, 
       setDailyAffirmations,
       handleDailyAffirmationsInputChange,
+      highlightsOfTheDay, 
+      setHighlightsOfTheDay,
+      handleHighlightsOfTheDayInputChange,
+      dailyReview, 
+      setDailyReview,
+      handleDailyReviewInputChange,
       editMode, 
       setEditMode, 
       toggleEditMode 

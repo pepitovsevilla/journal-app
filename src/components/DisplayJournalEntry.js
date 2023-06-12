@@ -3,6 +3,7 @@ import GratitudeItemsDisplay from './GratitudeItemsDisplay';
 import TopPrioritiesDisplay from './TopPrioritiesDisplay'
 import DailyAffirmationsDisplay from './DailyAffirmationsDisplay'
 import HighlightsOfTheDayDisplay from './HighlightsOfTheDayDisplay';
+import DailyReviewDisplay from './DailyReviewDisplay'
 
 export default function EditJournalEntry() {
 
@@ -12,6 +13,7 @@ export default function EditJournalEntry() {
             <TopPrioritiesDisplay />
             <DailyAffirmationsDisplay />
             <HighlightsOfTheDayDisplay />
+            <DailyReviewDisplay />
         </>
     )
 }
