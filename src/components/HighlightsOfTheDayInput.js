@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 export default function HighlightsOfTheDayInput() {
-  const [highlightsOfTheDay, setHighlightsOfTheDay] = useState(['', '', '']);
 
-  const handleHighlightsOfTheDayInputChange = (e, index) => {
-    const updatedItems = [...highlightsOfTheDay];
-    updatedItems[index] = e.target.value;
-    setHighlightsOfTheDay(updatedItems);
-  };
+  const { highlightsOfTheDay, handleHighlightsOfTheDayInputChange } = useContext(AppContext);
 
   return (
     <div className='container'>
