@@ -1,13 +1,9 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 export default function TopPrioritiesInput() {
-  const [topPriorities, setTopPriorities] = useState(['', '', '']);
 
-  const handleTopPrioritiesInputChange = (e, index) => {
-    const updatedItems = [...topPriorities];
-    updatedItems[index] = e.target.value;
-    setTopPriorities(updatedItems);
-  };
+  const { topPriorities, handleTopPrioritiesInputChange } = useContext(AppContext);
 
   return (
     <div className='container'>
