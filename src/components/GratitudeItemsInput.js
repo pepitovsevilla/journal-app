@@ -1,13 +1,8 @@
-import React, { useState } from 'react';
+import React, { useContext } from 'react';
+import { AppContext } from './AppContext';
 
 export default function GratitudeItemsInput() {
-  const [gratitudeItems, setGratitudeItems] = useState(['', '', '']);
-
-  const handleGratitudeItemsInputChange = (e, index) => {
-    const updatedItems = [...gratitudeItems];
-    updatedItems[index] = e.target.value;
-    setGratitudeItems(updatedItems);
-  };
+  const { gratitudeItems, handleGratitudeItemsInputChange } = useContext(AppContext);
 
   return (
     <div className='container'>
