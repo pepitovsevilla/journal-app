@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function TopPrioritiesInput() {
 
-  const { topPriorities, handleTopPrioritiesInputChange } = useContext(AppContext);
+  const { topPriorities, handleTopPrioritiesInputChange } = useContext(JournalEntryContext);
 
   return (
     <div className='container'>

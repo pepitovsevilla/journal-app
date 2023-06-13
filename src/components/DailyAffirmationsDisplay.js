@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function DailyAffirmationsDisplay() {
     
-    const { dailyAffirmations } = useContext(AppContext);
+    const { dailyAffirmations } = useContext(JournalEntryContext);
 
     return (
         <div className='container'>

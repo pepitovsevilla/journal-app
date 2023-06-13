@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function HighlightsOfTheDayDisplay() {
-    const { highlightsOfTheDay } = useContext(AppContext);
+    const { highlightsOfTheDay } = useContext(JournalEntryContext);
 
     return (
         <div className='container'>

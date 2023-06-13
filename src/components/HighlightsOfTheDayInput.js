@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function HighlightsOfTheDayInput() {
 
-  const { highlightsOfTheDay, handleHighlightsOfTheDayInputChange } = useContext(AppContext);
+  const { highlightsOfTheDay, handleHighlightsOfTheDayInputChange } = useContext(JournalEntryContext);
 
   return (
     <div className='container'>

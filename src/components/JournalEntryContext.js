@@ -1,8 +1,8 @@
 import { useState, createContext } from "react";
 
-export const AppContext = createContext(null)
+export const JournalEntryContext = createContext(null)
 
-export const AppContextProvider = ({ children }) => {
+export const JournalEntryContextProvider = ({ children }) => {
 
     const [gratitudeItems, setGratitudeItems] = useState(['', '', '']);
     
@@ -48,24 +48,29 @@ export const AppContextProvider = ({ children }) => {
         setEditMode(prevEditMode => !prevEditMode);
       }
     
-    return <AppContext.Provider value={{ 
-      gratitudeItems, 
-      setGratitudeItems, 
-      handleGratitudeItemsInputChange, 
-      topPriorities, 
-      setTopPriorities, 
-      handleTopPrioritiesInputChange,
-      dailyAffirmations, 
-      setDailyAffirmations,
-      handleDailyAffirmationsInputChange,
-      highlightsOfTheDay, 
-      setHighlightsOfTheDay,
-      handleHighlightsOfTheDayInputChange,
-      dailyReview, 
-      setDailyReview,
-      handleDailyReviewInputChange,
-      editMode, 
-      setEditMode, 
-      toggleEditMode 
-    }}>{children}</AppContext.Provider>;
+      return (
+        <JournalEntryContext.Provider value={{ 
+          gratitudeItems, 
+          setGratitudeItems, 
+          handleGratitudeItemsInputChange, 
+          topPriorities, 
+          setTopPriorities, 
+          handleTopPrioritiesInputChange,
+          dailyAffirmations, 
+          setDailyAffirmations,
+          handleDailyAffirmationsInputChange,
+          highlightsOfTheDay, 
+          setHighlightsOfTheDay,
+          handleHighlightsOfTheDayInputChange,
+          dailyReview, 
+          setDailyReview,
+          handleDailyReviewInputChange,
+          editMode, 
+          setEditMode, 
+          toggleEditMode 
+        }}>
+          {children}
+        </JournalEntryContext.Provider>
+      );
+      
 }

@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function GratitudeItemsInput() {
-  const { gratitudeItems, handleGratitudeItemsInputChange } = useContext(AppContext);
+  const { gratitudeItems, handleGratitudeItemsInputChange } = useContext(JournalEntryContext);
 
   return (
     <div className='container'>

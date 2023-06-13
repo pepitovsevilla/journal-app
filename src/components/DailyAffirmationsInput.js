@@ -1,9 +1,9 @@
 import React, { useContext } from 'react';
-import { AppContext } from './AppContext';
+import { JournalEntryContext } from './JournalEntryContext';
 
 export default function DailyAffirmationsInput() {
 
-  const { dailyAffirmations, handleDailyAffirmationsInputChange } = useContext(AppContext);
+  const { dailyAffirmations, handleDailyAffirmationsInputChange } = useContext(JournalEntryContext);
   
   return (
     <div className='container'>
